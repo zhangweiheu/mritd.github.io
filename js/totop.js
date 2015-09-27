@@ -7,13 +7,19 @@
 	var scrollElem = $('#totop');
    
 	// Scroll to top speed
-	var scrollSpeed = 500;
+	var scrollSpeed = 800;
+	//解决多说评论框冲突
+	var hidenButton = $(document).height()-$(window).height()-200;
    
 	// Show and hide the scroll to top link based on scroll position   
 	scrollElem.hide();
 	$(window).scroll(function () {            
-		var scrollTop = $(document).scrollTop();       
-		if ( scrollTop > upperLimit ) {
+		var scrollTop = $(document).scrollTop();  
+		console.log("scrollTop-->"+scrollTop+"dh-->"+$(document).height()+" wh-->"+$(window).height()+" hidenButton-->"+hidenButton );     
+		
+		if(scrollTop>=hidenButton){
+			$(scrollElem).stop().fadeTo(300, 0); 
+		}else if ( scrollTop > upperLimit ) {
 			$(scrollElem).stop().fadeTo(300, 1); // fade back in           
 		}else{       
 			$(scrollElem).stop().fadeTo(300, 0); // fade out

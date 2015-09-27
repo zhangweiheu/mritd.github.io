@@ -20,7 +20,7 @@
 		
 		if(scrollTop > upperLimit){
 			$(scrollElem).stop().fadeTo(300, 1); // fade back in
-		}else if (scrollTop>=hidenButton) {
+		}else if (scrollTop>=hiddenButton) {
 			$(scrollElem).stop().fadeTo(300, 0); //遇到多说最下面的评论框 隐藏           
 		}else{       
 			$(scrollElem).stop().fadeTo(300, 0); // fade out

@@ -15,13 +15,13 @@
 		
 		//解决多说评论框冲突     
 		var scrollTop = $(document).scrollTop();  
-		var hidenButton = $(document).height()-$(window).height()-100;
+		var hidenButton = $(document).height()-$(window).height()-130;
 		console.log("scrollTop-->"+scrollTop+"dh-->"+$(document).height()+" wh-->"+$(window).height()+" hidenButton-->"+hidenButton );     
 		
 		if(scrollTop > upperLimit){
 			$(scrollElem).stop().fadeTo(300, 1); // fade back in
 		}else if (scrollTop>=hidenButton) {
-			$(scrollElem).stop().fadeTo(300, 0);            
+			$(scrollElem).stop().fadeTo(300, 0); //遇到多说最下面的评论框 隐藏           
 		}else{       
 			$(scrollElem).stop().fadeTo(300, 0); // fade out
 		}

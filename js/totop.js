@@ -15,7 +15,7 @@
 		
 		//解决多说评论框冲突     
 		var scrollTop = $(document).scrollTop();  
-		var hiddenButton = $(document).height()-$(window).height()+500;
+		var hiddenButton = $(document).height()-$(window).height()-150;
 		console.log("scrollTop-->"+scrollTop+"dh-->"+$(document).height()+" wh-->"+$(window).height()+" hiddenButton-->"+hiddenButton );     
 		
 		if(scrollTop>=hiddenButton){

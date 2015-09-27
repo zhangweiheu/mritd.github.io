@@ -16,7 +16,9 @@
 		//解决多说评论框冲突     
 		var scrollTop = $(document).scrollTop();  
 		var hiddenButton = $(document).height()-$(window).height()-150;
-		console.log("scrollTop-->"+scrollTop+"dh-->"+$(document).height()+" wh-->"+$(window).height()+" hiddenButton-->"+hiddenButton );     
+		
+		//调试输出实时高度
+		//console.log("scrollTop-->"+scrollTop+" dh-->"+$(document).height()+" wh-->"+$(window).height()+" hiddenButton-->"+hiddenButton );     
 		
 		if(scrollTop>=hiddenButton){
 			$(scrollElem).stop().fadeTo(100, 0); //遇到多说最下面的评论框 隐藏           

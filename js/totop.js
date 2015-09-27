@@ -18,10 +18,10 @@
 		var hidenButton = $(document).height()-$(window).height()-100;
 		console.log("scrollTop-->"+scrollTop+"dh-->"+$(document).height()+" wh-->"+$(window).height()+" hidenButton-->"+hidenButton );     
 		
-		if(scrollTop>=hidenButton){
-			$(scrollElem).stop().fadeTo(300, 0); 
-		}else if ( scrollTop > upperLimit ) {
-			$(scrollElem).stop().fadeTo(300, 1); // fade back in           
+		if(scrollTop > upperLimit){
+			$(scrollElem).stop().fadeTo(300, 1); // fade back in
+		}else if (scrollTop>=hidenButton) {
+			$(scrollElem).stop().fadeTo(300, 0); //遇到多说最下面的评论框 隐藏           
 		}else{       
 			$(scrollElem).stop().fadeTo(300, 0); // fade out
 		}

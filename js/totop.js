@@ -8,13 +8,14 @@
    
 	// Scroll to top speed
 	var scrollSpeed = 800;
-	//解决多说评论框冲突
-	var hidenButton = $(document).height()-$(window).height()-100;
-   
+
 	// Show and hide the scroll to top link based on scroll position   
 	scrollElem.hide();
-	$(window).scroll(function () {            
+	$(window).scroll(function () {       
+		
+		//解决多说评论框冲突     
 		var scrollTop = $(document).scrollTop();  
+		var hidenButton = $(document).height()-$(window).height()-100;
 		console.log("scrollTop-->"+scrollTop+"dh-->"+$(document).height()+" wh-->"+$(window).height()+" hidenButton-->"+hidenButton );     
 		
 		if(scrollTop>=hidenButton){

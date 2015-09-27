@@ -15,8 +15,8 @@
 		
 		//解决多说评论框冲突     
 		var scrollTop = $(document).scrollTop();  
-		var hiddenButton = $(document).height()-$(window).height()-130;
-		console.log("scrollTop-->"+scrollTop+"dh-->"+$(document).height()+" wh-->"+$(window).height()+" hidenButton-->"+hiddenButton );     
+		var hiddenButton = $(document).height()-$(window).height()-500;
+		console.log("scrollTop-->"+scrollTop+"dh-->"+$(document).height()+" wh-->"+$(window).height()+" hiddenButton-->"+hiddenButton );     
 		
 		if(scrollTop > upperLimit){
 			$(scrollElem).stop().fadeTo(300, 1); // fade back in
